@@ -3,31 +3,22 @@ call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" Need more settings
-" Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'stylus']}
-
 Plug 'easymotion/vim-easymotion'
-
 Plug 'mileszs/ack.vim'
-
 Plug 'vim-airline/vim-airline'
-
 Plug 'yggdroot/indentline'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'tomtom/tcomment_vim'
-
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
-
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'tsony-tsonev/nerdtree-git-plugin'"
+Plug 'tsony-tsonev/nerdtree-git-plugin'
+Plug 'jeetsukumaran/vim-buffergator'
 
+" Plugins for telescope
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'nvim-telescope/telescope.nvim'
 
@@ -40,7 +31,6 @@ call plug#end()
 
 " ~ ~ ~ MORE SETTINGS ~ ~ ~
 let mapleader = "\<Space>"
-
 
 colorscheme codedark
 let g:codedark_italics = 1
@@ -101,6 +91,14 @@ let g:NERDTreeColorMapCustom = {
 
 let g:NERDTreeLimitedSyntax = 1
 
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
 " ~ ~ ~ MAPING FOR KEYS  ~ ~ ~
@@ -129,13 +127,26 @@ map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Find files using Telescope command-line sugar.
-nnoremap <Leader>ff <cmd>Telescope find_files<cr>
-nnoremap <Leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <Leader>fb <cmd>Telescope buffers<cr>
-nnoremap <Leader>fh <cmd>Telescope help_tags<cr>
+" nnoremap <Leader>ff <cmd>Telescope find_files<cr>
+" nnoremap <Leader>fg <cmd>Telescope live_grep<cr>
+" nnoremap <Leader>fb <cmd>Telescope buffers<cr>
+" nnoremap <Leader>fh <cmd>Telescope help_tags<cr>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Buffergator
+let g:buffergator_window_statusline = 1
+let g:buffergator_sort_regime = "mru"
+let g:buffergator_viewport_split_policy = "B"
+let g:buffergator_split_size = 10
+let g:buffergator_autoexpand_on_split = 0
+
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
