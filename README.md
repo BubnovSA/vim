@@ -1,4 +1,4 @@
-# Vimrc config
+# Vimrc settings
 
 ### 1. Copy .vimrc in home directory
 
@@ -18,4 +18,17 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 Open vim and run command:
 ```
 :PlugInstall
+```
+
+### Notes
+Initially, the background of the theme is more gray. To make it completely black, you can manually make one edit.
+```
+1. cd ~/.vim/plugged/vim-code-dark/colors
+
+2. vim codedark.vim
+
+3. edit this string:
+
+- let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
++ let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '232'}
 ```
