@@ -8,7 +8,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'yggdroot/indentline'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomtom/tcomment_vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
@@ -17,6 +16,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'jeetsukumaran/vim-buffergator'
+" Coc Vim
+" Install :CocInstall coc-docker coc-css coc-html coc-json coc-tsserver coc-eslint coc-emmet coc-highlight coc-stylelint coc-xml coc-prettier
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plugins for telescope
 " Plug 'nvim-lua/plenary.nvim'
