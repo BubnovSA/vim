@@ -3,7 +3,7 @@
 ### 1. Copy .vimrc in home directory
 
 ```
-<home_directory_name>/.vimrc
+~/.vimrc
 ```
 
 ###  2. Install Vim-plug
