@@ -165,3 +165,21 @@ nnoremap <Leader>a :Ack!<Space>
 "#   Run <:<first_string_string>,<end_string_number>norm! @<name_regster>> -
 "#   apply macros for target range strings;
 "#   Example (:22,51norm! @a);
+"# Notes for macros
+"# register = plase to store macros;
+"#
+"# Commands:
+"#   Press <qa> - start record macros in register <a>;
+"#   Press <qd> - start record macros in register <d>;
+"#   Press <q> - end record macros;
+"#   Press <@a> - apply macros from register <a> for current string;
+"#   Press <@@> - apply last macros for current string;
+"#   Run <:<first_string_string>,<end_string_number>norm! @<name_regster>> -
+"#   apply macros for target range strings;
+"#   Example (:22,51norm! @a);
+"
+"# Notes for buffergator
+"#  <ENTER> to edit the selected buffer in the previous window
+"#  <C-V> to edit the selected buffer in a new vertical split
+"#  <C-S> to edit the selected buffer in a new horizontal split
+"#  <C-T> to edit the selected buffer in a new tab page
