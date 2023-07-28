@@ -1,6 +1,7 @@
 " ~ ~ ~ PLUGINS ~ ~ ~
 call plug#begin()
 
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss', 'sass', 'stylus']}
@@ -28,7 +29,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
-
 
 
 " ~ ~ ~ MORE SETTINGS ~ ~ ~
@@ -69,6 +69,14 @@ set history=200
 
 set mouse=
 
+" Settings for codeium
+let g:codeium_disable_bindings = 1
+imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+imap <C-m>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <C-k>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+imap <C-x>   <Cmd>call codeium#Clear()<CR>
+
+
 " NERDThee git indicators
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIndicatorMapCustom = {
@@ -93,13 +101,11 @@ let g:NERDTreeColorMapCustom = {
 
 let g:NERDTreeLimitedSyntax = 1
 
-
 " ~ ~ ~ Mapping keys for COC autocomplite ~ ~ ~
 " Press: CTRL + y: To select the first item in the dropdown list press
 " Press: CTRL + n: Select the next item in the drop down list
 " Press: CTRL + p: To select the previous item in the drop down list
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<TAB>"
-
 
 " ~ ~ ~ MAPING FOR KEYS  ~ ~ ~
 map <C-n> :NERDTreeToggle<CR>
@@ -110,7 +116,7 @@ cnoremap <C-n> <Down>
 map <Down> <C-f>
 map <Up> <C-b>
 
-" Moveeng between buffers 
+" Moveeng between buffers
 map <C-k> <C-w><Up>
 map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
@@ -151,18 +157,7 @@ let g:buffergator_autoexpand_on_split = 0
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
-"# Notes for macros
-"# register = plase to store macros;
-"#
-"# Commands:
-"#   Press <qa> - start record macros in register <a>;
-"#   Press <qd> - start record macros in register <d>;
-"#   Press <q> - end record macros;
-"#   Press <@a> - apply macros from register <a> for current string;
-"#   Press <@@> - apply last macros for current string;
-"#   Run <:<first_string_string>,<end_string_number>norm! @<name_regster>> -
-"#   apply macros for target range strings;
-"#   Example (:22,51norm! @a);
+
 "# Notes for macros
 "# register = plase to store macros;
 "#
