@@ -72,7 +72,7 @@ set mouse=
 " Settings for codeium
 let g:codeium_disable_bindings = 1
 imap <script><silent><nowait><expr> <C-g> codeium#Accept()
-imap <C-m>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <C-l>   <Cmd>call codeium#CycleCompletions(1)<CR>
 imap <C-k>   <Cmd>call codeium#CycleCompletions(-1)<CR>
 imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
