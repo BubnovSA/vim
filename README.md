@@ -1,7 +1,5 @@
 # Vimrc settings
 
-NOTE: Version vim > 9.*.*
-
 ### 1. Copy .vimrc in home directory
 
 ```
@@ -23,6 +21,8 @@ Open vim and run command:
 ```
 
 ### Notes
+Version vim > 9.*.*
+
 Initially, the background of the theme is more gray. To make it completely black, you can manually make one edit.
 ```
 1. cd ~/.vim/plugged/vim-code-dark/colors
