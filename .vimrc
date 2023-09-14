@@ -1,6 +1,7 @@
 " ~ ~ ~ PLUGINS ~ ~ ~
 call plug#begin()
 
+" Run :Codeium Auth, then auth in Codeium official site
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
