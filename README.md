@@ -21,7 +21,9 @@ Open vim and run command:
 ```
 
 ### Notes
-Version vim > 9.*.*
+```
+Version vim > 9.0.0
+```
 
 Initially, the background of the theme is more gray. To make it completely black, you can manually make one edit.
 ```
