@@ -1,5 +1,7 @@
 # Vimrc settings
 
+NOTE: Version vim > 9.*.*
+
 ### 1. Copy .vimrc in home directory
 
 ```
