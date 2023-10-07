@@ -46,6 +46,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 set nowritebackup
 set nowrap
 set cursorline
+" install - apt install vim-gtk (for linux fix)
 set clipboard+=unnamedplus
 set clipboard=unnamed
 set encoding=UTF-8
