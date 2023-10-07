@@ -24,6 +24,9 @@ Open vim and run command:
 ```
 Version vim > 9.0.0
 ```
+```
+/etc/vim/vimrc - path for common vimrc configuration
+```
 
 Initially, the background of the theme is more gray. To make it completely black, you can manually make one edit.
 ```
