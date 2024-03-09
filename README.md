@@ -25,6 +25,9 @@ Open vim and run command:
 Version vim > 9.0.0
 ```
 ```
+For MacOS - brew install ack
+```
+```
 /etc/vim/vimrc - path for common vimrc configuration
 ```
 
