@@ -19,7 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'jeetsukumaran/vim-buffergator'
 " Coc Vim
-" Install :CocInstall coc-docker coc-css coc-html coc-json coc-tsserver coc-eslint coc-emmet coc-highlight coc-stylelint coc-xml coc-prettier coc-phpls
+" Install :CocInstall coc-docker coc-css coc-html coc-json coc-tsserver coc-eslint coc-emmet coc-highlight coc-stylelint coc-xml coc-prettier coc-phpls coc-phpls
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Plugins for telescope
