@@ -46,9 +46,20 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 set nowritebackup
 set nowrap
 set cursorline
-" set clipboard+=unnamedplus
+
+" ~~~ Clipboard variant settings ~~~
+
+" For Linux:
 " install - apt install vim-gui-common (for linux fix)
 set clipboard=unnamedplus
+
+" For MacOS:
+" set clipboard=unnamed 
+
+" Other variant
+" set clipboard+=unnamedplus
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 set encoding=UTF-8
 set noswapfile
 set expandtab
