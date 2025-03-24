@@ -39,6 +39,6 @@ Initially, the background of the theme is more gray. To make it completely black
 
 3. edit this string:
 
-- let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
-+ let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '232'}
+-let s:cdBack = {'gui': '#1E1E1E', 'cterm': s:cterm00, 'cterm256': '234'}
++let s:cdBack = {'gui': '#000000', 'cterm': s:cterm00, 'cterm256': '234'}
 ```
